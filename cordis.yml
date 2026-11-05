@@ -1,0 +1,10 @@
+# cordis.yml - DeepSeek Harness local mounting configuration
+plugins:
+  # Mount Software Factory plugin from local build
+  dsh-software-factory:
+    enabled: true
+    autoSyncAgentsMd: auto
+    defaultRoutingTier: balanced
+    enforceWorktreeIsolation: true
+    guardGitPush: true
+    memoryBudgetTokens: 4096
