@@ -36,7 +36,11 @@
     "software-factory",
     "agent-skills",
     "code-review",
-    "worktree"
+    "worktree",
+    "test-evidence",
+    "run-ledger",
+    "agent-memory",
+    "model-routing"
   ],
   "author": "Aditya Deokar",
   "license": "MIT",
