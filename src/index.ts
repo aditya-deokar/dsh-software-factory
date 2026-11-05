@@ -3,6 +3,7 @@ import { SoftwareFactoryService } from './service.js';
 import { Config } from './config.js';
 import { registerLifecycleHooks } from './hooks/index.js';
 import { registerCommands } from './commands/index.js';
+import { registerTools } from './tools/index.js';
 import type { SoftwareFactoryConfig } from './types.js';
 
 export const name = 'software-factory';
@@ -14,6 +15,7 @@ export * from './lib/agents-md.js';
 export * from './lib/report.js';
 export * from './hooks/index.js';
 export * from './commands/index.js';
+export * from './tools/index.js';
 
 /**
  * Main Cordis plugin entrypoint for DeepSeek Harness
@@ -32,4 +34,7 @@ export function apply(ctx: Context, config: SoftwareFactoryConfig = {}): void {
 
   // 3. Register Software Factory slash commands
   registerCommands(ctx);
+
+  // 4. Register Software Factory tools (Direct & PTC)
+  registerTools(ctx);
 }
