@@ -19,5 +19,8 @@ declare module '@deepseek-ai/cordis' {
     'factory/run-started'(runId: string, branch: string): void;
     'factory/run-finished'(runId: string, summary: Record<string, unknown>): void;
     'factory/memory-graduated'(factId: string, skillTarget: string): void;
+    'session/start'(session: unknown): void;
+    'session/before-stop'(session: unknown): void;
+    'tool/before-call'(event: unknown): void;
   }
 }
